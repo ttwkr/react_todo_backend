@@ -32,3 +32,11 @@ class checkedTodo(View):
         todo.save()
 
         return JsonResponse({'result': 'success'}, status=200)
+
+
+class deleteTodo(View):
+    def post(self, request, todo_id):
+
+        TodoList.objects.get(id=todo_id).delete()
+
+        return JsonResponse({'result': 'success'}, status=200)
