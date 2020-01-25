@@ -18,7 +18,7 @@ class addTodo(View):
 
     def get(self, request):
 
-        TodoLists = TodoList.objects.all()
+        TodoLists = TodoList.objects.all().order_by('-create_at')
         return JsonResponse({'result': list(TodoLists.values())})
 
 

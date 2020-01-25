@@ -3,6 +3,7 @@
 # Edit at https://www.gitignore.io/?templates=vim,django,python
 
 my_settings.py
+migragtions/
 
 ### Django ###
 *.log
